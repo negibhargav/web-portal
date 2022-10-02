@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> {% block title %} {% endblock title %}| Lib Protal</title>
+<link href="" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popper.js/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+<style> 
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .head2{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .head2 .name{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+        color: black;
+        margin-left: 60px;
+    }
+    
+    .social_button{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        align-items: center;
+        margin-right: 10px;
+    }
+    
+    .social_button .fa{
+        font-size: 30px;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    .social_button #social{
+        margin-left: 20px;
+        border: none;
+    }
+    
+    .social_button .fa-facebook{
+        color: white;
+        background-color: white;
+        border: none;
+    }
+    
+    .social_button .fa-twitter{
+        color: white;
+        background-color: white;
+        border: none;
+    }
+    
+    .social_button .fa-linkedin-square{
+        color: white;
+        background-color: white;
+        border: none;
+    }
+    
+    .social_button button{
+        border: none;
+        color: white;
+        background-color: #100E0E;
+        padding: 10px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+    .head {
+        position: relative;
+    }
+    
+    .head img{
+        width: 100%;
+        height: 600px;
+    }
+    
+    .info {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: white;
+        height: 100%;
+        width: 50%;
+        opacity: 0.3;
+    }
+    
+    .head h2{
+        position: absolute;
+        color: blue;
+        top: 30%;
+        right: 10%;
+        font-size: 75px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .head .quote{
+        position: absolute;
+        color: black;
+        top: 50%;
+        right: 10%;
+        padding-right: 30px;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+    
+    .head .name{
+        position: absolute;
+        color: black;
+        top: 55%;
+        right: 10%;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .back2{
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    
+    .back2 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 60px;
+    }
+    
+    .back2 p{
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    
+    .back2 img{
+        width: 99.5%;
+        height: 700px;
+    }
+    
+    .back2 button{
+        border: none;
+        color: white;
+        background-color: blue;
+        font-size: 20px;
+        padding: 20px 40px;
+        border-radius: 40px;
+    }
+    
+    .back2 .container1{
+        position: relative;
+        height: 150px;
+    }
+    
+    .back2 .container1 .button1{
+        position: absolute;
+        border: none;
+        right: 45%;
+        top: 25%;
+    }
+    
+    .container2{
+        position: relative;
+        height: 700px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    
+    .container2 .image2{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    
+    .container2 .image2 img{
+        width: 900px;
+        height: 700px;
+    }
+    
+    .container2 .text{
+        background-color: lightgray;
+        height: 400px;
+        width: 600px;
+        position: absolute;
+        right: 0px;
+        top: 20%;
+    }
+    
+    .container2 .text h2{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+    }
+    
+    .container2 .text h4{
+        position: absolute;
+        top: 35%;
+        left: 10%;
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .container2 .text p{
+        position: absolute;
+        top: 45%;
+        left: 10%;
+        right: 20%;
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .back7{
+        width: 100%;
+        height: 90px;
+        background-color: white;
+    }
+    
+    .back3{
+        background-color: lightgray;
+        padding-bottom: 50px;
+    }
+    
+    .back3 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
+        padding-top: 50px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+    
+    .back3 .here{
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .container3{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .container3 img{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+    }
+    
+    .first{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .first h3{
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        color: blue;
+    }
+    
+    .first p{
+        padding-bottom: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: black;
+    }
+    
+    .first button{
+        border: none;
+        color: blue;
+        background-color: white;
+        padding: 15px 35px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+    
+    .second{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .second h3{
+        padding-top: 20px;
+        padding-bottom: 15px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        color: blue;
+    }
+    
+    .second p{
+        padding-bottom: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: black;
+    }
+    
+    .second button{
+        border: none;
+        color: blue;
+        background-color: white;
+        padding: 15px 35px;
+        border-radius: 30px;
+        font-size: 15px;
+    }
+    
+    .text2{
+        position: relative;
+    }
+    
+    .text2 img{
+        width: 100%;
+    }
+    
+    .text2 .back4{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: black;
+        padding-bottom: 405px;
+        padding-left: 100%;
+        opacity: 0.4;
+    }
+    
+    .text2 h2{
+        position: absolute;
+        top: 25%;
+        left: 45%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        font-size: 70px;
+    }
+    
+    .text2 p{
+        position: absolute;
+        top: 55%;
+        left: 43%;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+    }
+    
+    .container4{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    
+    .query1{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .query1 img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .query1 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+    
+    .query1 p{
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .query2{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .query2 img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .query2 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+    
+    .query2 p{
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .query3{
+        width: 300px;
+        height: 300px;
+    }
+    
+    .query3 img{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .query3 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    
+    .query3 p{
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .container5{
+        position: relative;
+        padding-bottom: 0px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    
+    .container5 img{
+        height: 100%;
+        width: 100%;
+        opacity: 0.75;
+    }
+    
+    .container5 .back5{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background-color: white;
+        width: 50%;
+        height: 100%;
+    }
+    
+    .container5 h2{
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+        top: 15%;
+        left: 200px;
+        position: absolute;
+    }
+    
+    .container5 form{
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 500px;
+    }
+    
+    .container5 form label{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .container5 form input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .container5 form #button{
+        border: solid;
+        background-color: black;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .container5 p{
+        position: absolute;
+        top: 90%;
+        left: 16.5%;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    .back6{
+        background-color: white;
+        width: 100%;
+        height: 150px;
+    }
+    
+    .sub_form{
+        position: relative;
+        width: 100%;
+        height: 300px;
+    }
+    
+    .sub_form h2{
+        position: absolute;
+        top: 10%;
+        left: 45%;
+        color: blue;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 40px;
+    }
+    
+    .sub_form form{
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        text-align: center;
+        width: 300px;
+        height: 135px;
+    }
+    
+    .sub_form form label{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+        color: blue;
+        margin-bottom: 10px;
+    }
+    
+    .sub_form form input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    .sub_form form #button2{
+        border: solid;
+        background-color: black;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    .sub_form p{
+        position: absolute;
+        top: 85%;
+        left: 44%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 20px;
+    }
+    
+</style>
+
+</head>
+<body style="background-color:black;">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home">
+                <img src="/static/logo.png" alt="Logo" width="40" height="30" class="d-inline-block align-text-top">
+                    Library Protal
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Class">Class</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Know_more">Know More</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact_us">Contact Us</a>
+                    </li>
+                    </ul>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" href="login_page" role="button">Login</a>
+                    </div>
+                </div>
+            </nav>
+
+{% block body %} {% endblock body %}
+</body>
+</html>

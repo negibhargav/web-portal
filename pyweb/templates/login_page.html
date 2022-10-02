@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="login_page.css" rel="stylesheet">
+        <title>login</title>
+        <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            background-color: black;
+        }
+        
+        .head1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        
+        .head1 .name{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            color: white;
+            font-size: 120px;
+            margin-top: 170px;
+        }
+        
+        .head1 .name .library{
+            color: #FEE715FF;
+        }
+        
+        .head1 .name .portal{
+            color: white;
+        }
+        
+        .head1 .form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 130px;
+            background-color: gainsboro;
+            padding: 30px;
+            border-radius: 40px;
+        }
+        
+        .head1 .form .log{
+            color: black;
+            font-size: 50px;
+            text-align: center;
+            margin: 15px;
+            background-color: gainsboro;
+        }
+        
+        .head1 .form input{
+            padding: 10px 40px;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            margin: 10px;
+        }
+        
+        .head1 .form .sub{
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            margin: 10px;
+            border: none;
+            padding: 10px 20px;
+        }
+        
+        .head1 .form .new_acc{
+            color: black;
+            background-color: gainsboro;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .head1 .form .register{
+            border-radius: 10px;
+            font-size: 20px;
+            background-color: white;
+            color: black;
+            margin: 6px;
+            border: none;
+            padding: 10px 20px;
+        }
+    </style>   
+        
+        
+    </head>
+    <body>
+        <div class="head1">
+            <div class="name">
+                <p class="library">LIBRARY</p>
+                <p class="portal">PORTAL</p>
+            </div>
+            <div class="form">
+                <p class="log">LOG-IN</p>
+                <input type="text" placeholder="Username" class="username" required>
+                <input type="password" placeholder="Password" class="pass" required>
+                <button type="Submit" class="sub">Login</button>
+                <p class="new_acc">Don't have an account?</p>
+                <button type="button" class="register">Register</button>
+            </div>
+        </div>
+    </body>
+</html>
