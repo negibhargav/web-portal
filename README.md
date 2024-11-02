@@ -28,8 +28,8 @@ This project is a web-based library system designed to help students access stud
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/library-system.git
-   cd library-system
+   git clone https://github.com/your-username/web-portal.git
+   cd web-portal
    ```
 
 2. **Set up a Virtual Environment**
@@ -40,7 +40,7 @@ This project is a web-based library system designed to help students access stud
 
 3. **Install Required Packages**
    ```bash
-   pip install -r requirements.txt
+   pip install django
    ```
 
 4. **Run Database Migrations**
@@ -64,11 +64,10 @@ This project is a web-based library system designed to help students access stud
 
 ## Project Structure
 
-- **/library_system** - Main Django app folder containing settings, URLs, and core application files.
+- **/web-portal** - Main Django app folder containing settings, URLs, and core application files.
 - **/templates** - HTML files for the frontend interface.
 - **/static** - CSS files and other static assets.
-- **/notes** - Django app handling resource uploads and downloads.
-- **/forum** - Django app for question-and-answer forum functionality.
+- **/web** - Django app handling resource uploads and downloads.
 
 ## Application Functionality
 
